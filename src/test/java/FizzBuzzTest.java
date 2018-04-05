@@ -44,14 +44,15 @@ public class FizzBuzzTest {
 
 
     @Test
-    public void should_return_Generic_fizz_if_multiple_of_3() {
+    public void should_return_generic_fizz_if_multiple_of_3() {
         assertThat(fizzBuzz.processGeneric(3)).isEqualTo("Fizz");
         assertThat(fizzBuzz.processGeneric(6)).isEqualTo("Fizz");
         assertThat(fizzBuzz.processGeneric(9)).isEqualTo("Fizz");
     }
     @Test
-    public void should_return_input_With_Generic(){
+    public void should_return_input_with_generic(){
         assertThat(fizzBuzz.processGeneric(1)).isEqualTo("1");
         assertThat(fizzBuzz.processGeneric(13)).isEqualTo("13");
+        assertThat(fizzBuzz.processGeneric(105)).isEqualTo("FizzBuzzOLBATI");
     }
 }

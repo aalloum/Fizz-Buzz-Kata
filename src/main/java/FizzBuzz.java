@@ -29,28 +29,28 @@ public class FizzBuzz {
         return input % 3 == 0;
     }
 
-    public String processWishString(int input) {
+    public String processWithString(int input) {
+
         StringBuilder result = new StringBuilder();
         if (isMultipleOf3(input)) {
-            
             result.append("Fizz");
         }
         if (isMultipleOf5(input)) {
             result.append("Buzz");
         }
-        if (isNotmultipleof3nor5(result)) {
+        if (isNotMultipleOf3Nor5(result)) {
             result.append(Integer.toString(input));
         }
+
         return result.toString();
 
     }
 
-    private boolean isNotmultipleof3nor5(StringBuilder result) {
+    private boolean isNotMultipleOf3Nor5(StringBuilder result) {
         return result.length() == 0;
     }
 
     public String processGeneric(int input) {
-        //  throw new UnsupportedOperationException();
 
         StringBuilder result = new StringBuilder();
         Map<Integer, String> map = new HashMap<>();
@@ -58,15 +58,15 @@ public class FizzBuzz {
         map.put(5, "Buzz");
         map.put(7, "OLBATI");
         for (Map.Entry<Integer, String> pair : map.entrySet()) {
-            if( input % pair.getKey() == 0){
-               result.append(pair.getValue());
+            if (input % pair.getKey() == 0) {
+                result.append(pair.getValue());
             }
         }
-        if (isNotmultipleof3nor5(result)) {
+        if (isNotMultipleOf3Nor5(result)) {
             result.append(Integer.toString(input));
         }
 
         return result.toString();
-        }
+    }
 
 }
